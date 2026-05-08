@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: travelo-config
+  namespace: travelo
+data:
+  SPRING_DATASOURCE_URL: "jdbc:mysql://travelo-mysql:3306/travelo"
+  SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
+  SPRING_JPA_SHOW_SQL: "false"
+  MYSQL_DATABASE: "travelo"
