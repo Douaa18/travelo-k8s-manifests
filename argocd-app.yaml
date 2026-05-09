@@ -7,8 +7,10 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Douaa18/travelo-k8s-manifests.git
-    targetRevision: HEAD
+    targetRevision: main
     path: .
+    directory:
+      recurse: true
   destination:
     server: https://kubernetes.default.svc
     namespace: travelo
@@ -18,4 +20,3 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-
