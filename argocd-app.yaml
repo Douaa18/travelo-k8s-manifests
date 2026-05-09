@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/douaa18/travelo-k8s-manifests.git
+    repoURL: https://github.com/Douaa18/travelo-k8s-manifests.git
     targetRevision: HEAD
     path: .
   destination:
