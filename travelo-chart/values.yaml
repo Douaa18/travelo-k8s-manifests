@@ -1,0 +1,37 @@
+namespace: travelo-helm
+
+backend:
+  image: travelo-backend
+  tag: "1.0"
+  replicas: 2
+  port: 8080
+  resources:
+    requests:
+      cpu: "250m"
+      memory: "512Mi"
+    limits:
+      cpu: "500m"
+      memory: "1Gi"
+
+frontend:
+  image: travelo-frontend
+  tag: "1.0"
+  replicas: 2
+  port: 80
+  resources:
+    requests:
+      cpu: "100m"
+      memory: "128Mi"
+    limits:
+      cpu: "250m"
+      memory: "256Mi"
+
+mysql:
+  image: mysql
+  tag: "8.0"
+  rootPassword: root
+  database: travelo
+  storage: 1Gi
+
+ingress:
+  host: travelo-helm.local
